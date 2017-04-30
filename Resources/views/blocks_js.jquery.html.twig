@@ -80,7 +80,7 @@ $(function () {
     });
 
     // Grid_search submit (load only one time)
-    $('#{{ grid.hash }}_search').one('submit', function (event) {
+    $('#{{ grid.hash }}_search').off('submit').one('submit', function (event) {
         {{ grid.hash }}_submitForm(event, this);
 
         return false;
